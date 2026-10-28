@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", "Yu Gothic", sans-serif; background: #fff8f0; color: #302b28; }
+.container { max-width: 720px; margin: 0 auto; padding: 24px 16px 40px; }
+header { text-align: center; margin-bottom: 24px; }
+h1 { font-size: 36px; margin: 0 0 8px; color: #e36b3c; }
+header p { margin: 0; color: #6b625c; }
+h2 { font-size: 21px; margin-top: 0; }
+.panel, .food-card { background: white; border: 1px solid #f0e1d7; border-radius: 16px; padding: 22px; margin-bottom: 18px; box-shadow: 0 4px 12px #302b2809; }
+label { display: block; margin: 15px 0 7px; font-weight: 700; }
+select, input { display: block; width: 100%; padding: 12px; border: 1px solid #d9c8bc; border-radius: 9px; background: white; font-size: 16px; }
+button, .map-link { display: inline-block; border: none; border-radius: 9px; background: #e36b3c; color: white; padding: 13px 17px; font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; }
+#searchButton { width: 100%; margin-top: 22px; }
+button:hover, .map-link:hover { background: #c94e25; }
+.map-link { display: block; margin: 14px 0; background: #367e65; }
+.map-link:hover { background: #25604b; }
+.food-card h3 { margin: 0 0 8px; font-size: 22px; }
+.food-card p { margin: 7px 0; }
+.time-check { background: #f9f7f4; padding: 15px; border-radius: 10px; margin-top: 15px; }
+.time-check label { margin-top: 0; }
+.time-check button { margin-top: 10px; width: 100%; }
+.judgment { font-weight: 700; margin-top: 12px; }
+.ok { color: #187349; }
+.ng { color: #b53b2b; }
+.message { color: #b53b2b; min-height: 1.2em; }
+.note, footer { color: #736960; font-size: 13px; line-height: 1.7; }
+footer { text-align: center; margin-top: 20px; }

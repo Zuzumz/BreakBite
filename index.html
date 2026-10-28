@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BreakBite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🍱 BreakBite</h1>
+      <p>休憩時間にぴったりの食事を見つけよう！</p>
+    </header>
+
+    <section class="panel">
+      <h2>条件を選んでください</h2>
+      <label for="breakTime">⏰ 休憩時間</label>
+      <select id="breakTime">
+        <option value="">選んでください</option>
+        <option value="20">20分</option>
+        <option value="30">30分</option>
+        <option value="45">45分</option>
+        <option value="60">60分</option>
+      </select>
+
+      <label for="budget">💰 予算</label>
+      <select id="budget">
+        <option value="">選んでください</option>
+        <option value="500">500円以内</option>
+        <option value="800">800円以内</option>
+        <option value="1000">1000円以内</option>
+        <option value="1500">1500円以内</option>
+      </select>
+
+      <label for="mood">😊 今の気分</label>
+      <select id="mood">
+        <option value="">選んでください</option>
+        <option value="light">軽め</option>
+        <option value="heavy">がっつり</option>
+        <option value="healthy">ヘルシー</option>
+        <option value="spicy">辛いもの</option>
+        <option value="sweet">甘いもの</option>
+        <option value="warm">温かいもの</option>
+        <option value="sour">すっぱいもの</option>
+        <option value="any">なんでも</option>
+      </select>
+
+      <label for="weather">🌤️ 今の天気</label>
+      <select id="weather">
+        <option value="">選んでください</option>
+        <option value="sun">晴れ</option>
+        <option value="rain">雨</option>
+        <option value="hot">暑い</option>
+        <option value="cold">寒い</option>
+      </select>
+
+      <button id="searchButton" type="button">🍽️ おすすめを探す</button>
+      <p id="message" class="message" role="status"></p>
+    </section>
+
+    <section id="result" aria-live="polite"></section>
+    <footer>※価格・食事時間・待ち時間は参考値です。実際の情報はお店で確認してください。</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
