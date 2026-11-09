@@ -1,24 +1,19 @@
 // ① おすすめする食べ物（価格と食事時間はサンプル）
 const foods = [
-  { name: "親子丼", price: 590, eatTime: 15, mood: "heavy", weather: ["sun", "rain", "hot", "cold"],shopType: "convenience"},
-  { name: "うどん", price: 500, eatTime: 15, mood: "light", weather: ["sun", "rain", "cold"],shopType: "restaurant"},
-  { name: "おにぎり", price: 360, eatTime: 6, mood: "light", weather: ["sun", "rain", "hot", "cold"],shopType: "convenience"},
-  { name: "サンドイッチ", price: 300, eatTime: 10, mood: "light", weather: ["sun", "rain", "hot", "cold"],shopType: "convenience"},
-  { name: "サラダ", price: 350, eatTime: 10, mood: "healthy", weather: ["sun", "rain", "hot", "cold"],shopType: "both"},
-  { name: "お弁当", price: 480, eatTime: 15, mood: "heavy", weather: ["sun", "rain", "hot", "cold"],shopType: "both"},
-  { name: "辛いラーメン", price: 750, eatTime: 20, mood: "spicy", weather: ["sun", "rain", "cold"],shopType: "both"},
-  { name: "ドーナツ", price: 200, eatTime: 8, mood: "sweet", weather: ["sun", "rain", "hot", "cold"],shopType: "both"},
-  { name: "温かいスープ", price: 350, eatTime: 10, mood: "warm", weather: ["rain", "cold"],shopType: "convenience"},
-  { name: "冷やしうどん", price: 450, eatTime: 12, mood: "refreshing", weather: ["sun", "hot"],shopType: "restaurant"},
-  { name: "チキン定食", price: 850, eatTime: 20, mood: "heavy", weather: ["sun", "rain", "hot", "cold"],shopType: "restaurant"},
-  { name: "ケーキ", price: 600, eatTime: 15, mood: "sweet", weather: ["sun", "rain", "hot", "cold"],shopType: "convenience"},
-  { name: "ざるそば", price: 600, eatTime: 15, mood: "refreshing", weather: ["sun", "hot"],shopType: "restaurant"},
-  { name: "野菜スープ", price: 450, eatTime: 12, mood: "healthy", weather: ["rain", "cold"],shopType: "restaurant"},
-  { name: "すっぱいレモングミ", price: 150, eatTime: 3, mood: "sour", weather: ["sun", "rain", "hot", "cold"], shopType: "convenience" },
-  { name: "きゅうりの浅漬け", price: 200, eatTime: 5, mood: "sour", weather: ["sun", "rain", "hot", "cold"], shopType: "convenience" },
-  { name: "フルーツヨーグルト", price: 180, eatTime: 5, mood: "sour", weather: ["sun", "rain", "hot", "cold"], shopType: "convenience" },
-  { name: "レモン風味のパスタサラダ", price: 400, eatTime: 12, mood: "sour", weather: ["sun", "hot"], shopType: "convenience" },
-  { name: "いなり寿司", price: 300, eatTime: 8, mood: "sour", weather: ["sun", "rain", "hot", "cold"], shopType: "both" },
+  { name: "親子丼", price: 590, eatTime: 15, mood: "heavy", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "うどん", price: 500, eatTime: 15, mood: "light", weather: ["sun", "rain", "cold"] },
+  { name: "おにぎり", price: 360, eatTime: 6, mood: "light", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "サンドイッチ", price: 300, eatTime: 10, mood: "light", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "サラダ", price: 350, eatTime: 10, mood: "healthy", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "お弁当", price: 480, eatTime: 15, mood: "heavy", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "辛いラーメン", price: 750, eatTime: 20, mood: "spicy", weather: ["sun", "rain", "cold"] },
+  { name: "ドーナツ", price: 200, eatTime: 8, mood: "sweet", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "温かいスープ", price: 350, eatTime: 10, mood: "warm", weather: ["rain", "cold"] },
+  { name: "冷やしうどん", price: 450, eatTime: 12, mood: "refreshing", weather: ["sun", "hot"] },
+  { name: "チキン定食", price: 850, eatTime: 20, mood: "heavy", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "ケーキ", price: 600, eatTime: 15, mood: "sweet", weather: ["sun", "rain", "hot", "cold"] },
+  { name: "ざるそば", price: 600, eatTime: 15, mood: "refreshing", weather: ["sun", "hot"] },
+  { name: "野菜スープ", price: 450, eatTime: 12, mood: "healthy", weather: ["rain", "cold"] }
 ];
 
 // ② 時間の目安（分）
@@ -83,20 +78,8 @@ function findFood() {
     const mapLink = document.createElement("a");
     mapLink.className = "map-link";
     mapLink.textContent = "🗺️ Google Mapsで近くのお店を探す";
-    
-let searchWord = "";
-
-if (food.shopType === "convenience") {
-  searchWord = "近くのコンビニ";
-} else if (food.shopType === "restaurant") {
-  searchWord = food.name + " 近くの飲食店";
-} else if (food.shopType === "both") {
-  searchWord = food.name + " 近くの店 コンビニ";
-}
-
-mapLink.href =
-  "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent(searchWord);
+    mapLink.href = "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(food.name + " 近く");
     mapLink.target = "_blank";
     mapLink.rel = "noopener noreferrer";
     card.appendChild(mapLink);
